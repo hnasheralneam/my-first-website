@@ -1,0 +1,85 @@
+@font-face {
+    font-family: "Comic Sans MS";
+    src: url("assets/Comic Sans MS.ttf");
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    background-color: #222;
+    padding: .4em;
+    border: .3em dashed red;
+}
+
+body {
+    font-family: "Comic Sans MS", cursive;
+    background-color: purple;
+    color: #fff;
+    text-align: center;
+}
+
+.content {
+    padding: 1em;
+}
+
+footer {
+    position: absolute;
+    background-color: blue;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: .4em;
+}
+
+.banner-outer {
+    overflow: hidden;
+    padding: .5em 0;
+    background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+}
+
+.banner {
+    font-weight: 700;
+    text-shadow: 0 .1em .2em rgba(0, 0, 0, .5);
+    animation: banner-scroll 5s linear infinite;
+}
+
+.turning {
+    animation: rotate-forever 2s linear infinite;
+}
+
+ul {
+    display: inline-block;
+}
+
+a {
+    color: yellow;
+    text-decoration: none;
+    margin: 0 .5em;
+    font-family: sans-serif;
+}
+
+a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+@keyframes banner-scroll {
+    from {
+        transform: translateX(55%);
+    }
+    to {
+        transform: translateX(-55%);
+    }
+}
+
+@keyframes rotate-forever {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
